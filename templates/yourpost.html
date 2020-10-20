@@ -1,0 +1,108 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block title %} Dashboard {% endblock %}
+<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+{% block body %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="{% static 'assets/css/customize.css' %}" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+        {% if request.user.id == id %}
+            {% include 'includes/sidenav.html' %}
+        {% else %}
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="navi">
+                    <ul>
+                        <li class="active"><a href=""><i class="fa fa-users" aria-hidden="true"></i><span class="hidden-xs hidden-sm">{{acc}}</span></a></li>
+                        <li><a href="{% url 'account:posts' acc.id %}"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Post</span></a></li>
+                        {% if request.user.id == id %}
+                        <li><a href="{% url 'account:profile_edit' %}"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Profile</span></a></li>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+<div class="row">
+                    <header>
+                        <div class="col-md-6">
+                            <nav class="navbar-default pull-left">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="search hidden-xs hidden-sm">
+                                <input type="text" placeholder="Search" id="search">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right">
+                                    {% if request.user.id == id %}
+                                   {% include 'includes/addpost.html' %}
+                                    {% endif %}
+                                    <!--<li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>-->
+                                    <!--<li>
+                                        <a href="#" class="icon-info">
+                                            <i class="fa fa-bell" aria-hidden="true"></i>
+                                            <span class="label label-primary">3</span>
+                                        </a>
+                                    </li>-->
+
+                                    {% include 'includes/nav-dropdown.html' %}
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            <table class="table" style="position:relative;">
+                <th> Title </th>
+                <th> Minimum Price </th>
+                <th> Post Date </th>
+                <th> Last Bid Date </th>
+                <th> Day Used </th>
+                <th> Category </th>
+                {% if request.user.id == id %}
+                <th> Action </th>
+                {% endif %}
+                {% for post in yourpost %}
+                    <tr>
+                        <td><a href = "{% url 'account:biddingdetails' post.id %}"> {{post.title}}</a></td>
+                        <td><a href = "#"> {{post.minimumprice}}</a></td>
+                        <td><a href = "#"> {{post.postdate}}</a> </td>
+                        <td><a href = "#"> {{post.lastbiddate}}</a></td>
+                        <td><a href = "#"> {{post.dayused}}</a> </td>
+                        <td><a href = "#"> {{post.category}}</a> </td>
+                        {% if request.user.id == id %}
+                        <td> <a href="{% url 'account:editpost' post.slug %}"><i class="fa fa-lg fa-pencil"></i></a> || <a href="{% url 'product:product_delete' post.slug %}"><i class="fa fa-lg fa-trash delete_icon" style="color:red;"></i></a> </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+            </div>
+        </div>
+
+    </div>
+    <hr style="color:black;">
+{% endblock %}
+{% block js %}
+    <script>
+        $('.delete_icon').click(function(e) {
+});
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,121 @@
+// Variables
+@import "variable.scss";
+.popular-listing {
+    .card {
+        margin-top: 45px;
+        .img-block {
+            position: relative;
+            z-index: 1;
+            &::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                background: transparent linear-gradient(rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.5));
+                z-index: 0;
+            }
+            h5 {
+                position: absolute;
+                bottom: 1.25rem;
+                left: 1.25rem;
+                margin: 0px;
+                color: $wh;
+                z-index: 2;
+                font-weight: 600;
+            }
+            span {
+                position: absolute;
+                right: 1.25rem;
+                bottom: 1.25rem;
+                color: $wh;
+                z-index: 2;
+                text-transform: uppercase;
+                font-size: 13px;
+                background: rgba(145, 147, 152, 0.7);
+                border-radius: 50px;
+                padding: 5px 13px;
+            }
+            .overlay {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: rgba(106, 123, 231, 0.8);
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+        .card-body {
+            padding: 1.6rem 1.25rem 0px;
+            h3 {
+                font-size: 18px;
+            }
+            p {
+                i {
+                    margin-right: 8px;
+                    font-size: 14px;
+                    margin-left: 3px;
+                }
+                font-size: 13px;
+                color: $tl;
+            }
+            ul {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 16px;
+                li {
+                    display: inline-block;
+                    font-size: 13px;
+                    color: $td;
+                    border-right: 1px solid #ddd;
+                    padding: 0px 15px;
+                    &:first-child {
+                        padding-left: 0px;
+                    }
+                    &:last-child {
+                        border-right: 0px;
+                    }
+                }
+            }
+        }
+        .card-footer {
+            background: transparent;
+            border-top: 0px;
+            a {
+                color: $tl;
+                font-size: 13px;
+                position: relative;
+                top: 2px;
+                .icon-heart {
+                    background: #f3f4f7;
+                    color: #242526;
+                    padding: 10px;
+                    font-size: 15px;
+                    border-radius: 50px;
+                    position: relative;
+                    top: 1px;
+                }
+                .fa-calendar {
+                    margin-right: 7px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &:hover,
+        &:focus {
+            .img-block {
+                .overlay {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.img-block {
+    img {
+        width: 100%;
+    }
+}

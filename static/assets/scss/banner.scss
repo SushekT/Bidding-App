@@ -1,0 +1,159 @@
+// Variables
+@import "variable.scss";
+.banner {
+    padding: 200px 0px;
+    background: url('../images/banner/1.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 675px;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(7, 15, 67, 0.8);
+        z-index: -1;
+    }
+}
+
+.banner-content {
+    h1 {
+        font-size: 44px;
+        color: $wh;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 40px;
+        margin-top: 55px;
+    }
+}
+
+.banner-search {
+    background: $wh;
+    border-radius: 50px;
+    margin: 0px 15px;
+    padding: 0px 10px;
+    .form-group {
+        margin: 0px;
+    }
+    .form-control {
+        font-size: 14px;
+        font-weight: 500;
+        height: 46px;
+        border: 0px;
+        margin: 10px 0px;
+        border-radius: 0px;
+        padding-left: 20px;
+        &:hover,
+        &:focus,
+        &.active {
+            box-shadow: none!important;
+        }
+    }
+    .btn {
+        border-radius: 50px;
+        margin: 7px 0px;
+        padding: 13px 30px;
+        float: right;
+        background: $lb;
+        color: $wh;
+        box-shadow: none!important;
+        border: 1px solid $lb;
+        i {
+            margin-right: 7px;
+            font-size: 15px;
+        }
+        &:hover,
+        &:focus,
+        &.active {
+            background: $lb;
+            border: 1px solid $lb;
+            color: $wh;
+            box-shadow: none!important;
+        }
+    }
+}
+
+///////////////////////////////
+// Styling Selectbox 
+//////////////////////////////
+.drop-menu {
+    background: $wh;
+    width: 100%;
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: relative;
+    font-size: 14px;
+    height: 100%;
+    text-align: left;
+    margin: 12px 0px;
+    border-left: 1px solid $border;
+    padding-left: 10px;
+    .select {
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        color: #7e7f82;
+        font-weight: 500;
+        i {
+            font-size: 14px;
+            margin-top: 5px;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            float: right;
+        }
+        .currency {
+            font-size: 13px;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            float: right;
+        }
+    }
+    &.active {
+        &:hover,
+        &:focus {
+            border-radius: 5px 5px 0 0;
+        }
+        border-radius: 5px 5px 0 0;
+        .select {
+            box-shadow: none!important;
+            outline: none;
+        }
+        .select i {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    .dropeddown {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        margin-top: 1px;
+        border-radius: 0 1px 5px 5px;
+        overflow: hidden;
+        display: none;
+        max-height: 144px;
+        overflow-y: auto;
+        z-index: 9;
+        background: $wh;
+        li {
+            padding: 10px;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            color: $td;
+        }
+        padding: 0;
+        list-style: none;
+    }
+}

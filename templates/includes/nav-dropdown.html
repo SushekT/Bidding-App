@@ -1,0 +1,27 @@
+                                    <li class="dropdown">
+                                        {% if request.user.id == id %}
+                                            <a href="#" class="dropdown" data-toggle="dropdown"><img src="{{request.user.image.url}}" alt="{{acc}}">
+                                        {% else %}
+                                            <a href="#" class="dropdown" data-toggle="dropdown"><img src="{{acc.image.url}}" alt="{{acc}}">
+                                        {% endif %}
+                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    <span>{{acc}}</span>
+                                                    <p class="text-muted small">
+                                                        {{request.user.user}}
+                                                    </p>
+                                                    <div class="divider">
+                                                    </div>
+                                                    {% if request.user.id == id %}
+                                                    <form action='{% url "account:imagechange" %}' method="POST" enctype="multipart/form-data" name="image">
+                                                        {% csrf_token %}
+                                                        <input type="file" name="image"><br>
+                                                        <button class="btn-primary primary">Update Profile Picture</button>
+                                                    </form>
+                                                    {% endif %}
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>

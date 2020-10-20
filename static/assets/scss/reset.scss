@@ -1,0 +1,116 @@
+//
+@import 'bootstrap.min.css';
+body {
+    font-family: $pp;
+    color: $tl;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a {
+    transition: all 0.4s ease-in-out;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+a.link {
+    color: $lb;
+}
+
+a.link:focus,
+a.link:hover {
+    color: $db;
+}
+
+ul {
+    padding: 0;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $td;
+    font-weight: 500;
+}
+
+p {
+    font-family: $rl;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+.section-padding {
+    padding: 65px 0px;
+}
+
+.section-heading {
+    text-align: center;
+    span {
+        font-size: 14px;
+        color: $tl;
+    }
+    h3 {
+        font-size: 32px;
+        font-weight: 400;
+    }
+}
+
+.card {
+    border-radius: 0px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    padding: 20px;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #7e7f82;
+}
+
+ ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #7e7f82;
+}
+
+ :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #7e7f82;
+}
+
+ :-moz-placeholder {
+    /* Firefox 18- */
+    color: #7e7f82;
+}

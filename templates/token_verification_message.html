@@ -1,0 +1,17 @@
+{% extends 'master/base.html' %}
+{% load static %}
+
+    {% block title %} Verify Account {% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row" style="width:100%;">
+                <div class="alert alert-danger" style="width:100%; height:150px;">
+                    <center><h1 style="font-size:24px; margin-top:40px;">
+                        Your Account is not verified. Please check your mail for the verification.
+                    </h1></center>
+                </div>
+            <p class="container" style="z-index:100;"> Didn't get the mail <a href="{% url 'account:resend' %}" style="text-decoration: None;">Resend Here</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+<div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="navi">
+                    <ul>
+                        <li class="active"><a href=""><i class="fa fa-users" aria-hidden="true"></i><span class="hidden-xs hidden-sm">{{acc}}</span></a></li>
+                        <li><a href="{% url 'account:posts' request.user.id %}"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Post</span></a></li>
+                        <li><a href="{% url 'account:profile_edit' %}"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Profile</span></a></li>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                    </ul>
+                </div>
+            </div>

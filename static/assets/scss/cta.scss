@@ -1,0 +1,18 @@
+// Variables
+@import  "variable.scss";
+
+.cta{
+    background: #303e94;
+    &.section-padding{
+        padding: 65px 0px;
+    }
+    .cta-text{
+        text-align: center;
+        h2{
+            font-size: 32px;
+            color: $wh;
+            margin: 0px;
+
+        }
+    }
+}

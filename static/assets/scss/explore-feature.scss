@@ -1,0 +1,35 @@
+// Variables
+@import "variable.scss";
+.explore-feature {
+    .card {
+        text-align: center;
+        border-color: $border;
+        margin-top: 50px;
+        .card-body {
+            padding: 35px 15px;
+            i {
+                font-size: 36px;
+                background: $lb;
+                color: $wh;
+                border-radius: 100%;
+                height: 90px;
+                width: 90px;
+                padding: 25px;
+                display: inline-block;
+            }
+            h3 {
+                font-size: 18px;
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                color: #67686c;
+                line-height: 23px;
+            }
+        }
+    }
+}

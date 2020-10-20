@@ -1,0 +1,291 @@
+{% extends 'master/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} Home {% endblock %}
+
+</head>
+{% block body %}
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+
+
+        <section class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-content">
+                            <h1>Discover best properties in one place</h1>
+                        </div>
+                        <form action="{% url 'product:search' %}" method="GET" class="row banner-search">
+                            <div class="form_field addres" style="width:1002px;">
+                                <input type="text" name="q" class="form-control" placeholder="Enter the product name">
+                            </div>
+                                <button type="submit" class="btn btn-outline-primary ">
+                                    <i class="la la-search"></i>
+                                    <span>Search</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 pl-0">
+                        <div class="intro-content">
+                            <h3>Homes around the world</h3>
+                            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary view-btn">
+                                <i class="icon-arrow-right-circle"></i>View for rent</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 pr-0">
+                        <div class="intro-img">
+                            <img src="https://via.placeholder.com/570x400" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-thumb-row">
+                    <a href="#" class="intro-thumb">
+                        <img src="https://via.placeholder.com/95x70" alt="">
+                        <h6>Homes</h6>
+                    </a>
+                    <a href="#" class="intro-thumb">
+                        <img src="https://via.placeholder.com/95x70" alt="">
+                        <h6>Appartments</h6>
+                    </a>
+                    <a href="#" class="intro-thumb">
+                        <img src="https://via.placeholder.com/95x70" alt="">
+                        <h6>Garages</h6>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-listing section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-heading">
+                            <span>Discover</span>
+                            <h3>Popular Listing</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for post in product %}
+                        <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <a href="{% url 'product:product_detail' post.slug %}" title="">
+                                <div class="img-block" style="height:400px; overflow: hidden;">
+                                    <div class="overlay"></div>
+                                    <img src="{{post.cover_image.url}}" alt="{{post.title}}" class="img-fluid">
+                                    <div class="rate-info">
+                                        <h5>Rs {{post.minimumprice}}</h5>
+                                        <a href="{% url 'account:dashboard' post.user_id %}"><span>{{post.user}}</span></a>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <a href="#" title="">
+                                    <h3>{{post.title}}</h3></a>
+                                    <p> <i class="la la-phone"></i>{{post.user.contact_no}}</p>
+
+                                <ul>
+                                    <li>LastBid:{{post.lastbiddate}}</li><br>
+                                    <li>{{post.dayused}} Day Used</li>
+                                    <li>{{post.category}}</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="pull-left">
+                                    <i class="la la-heart-o"></i>
+                                </a>
+                                <a href="#" class="pull-right">
+                                    <i class="la la-calendar-check-o"></i> {{post.post_duration}}</a>
+                            </div>
+                            <a href="{% url 'product:product_detail' post.slug %}" title="" class="ext-link"></a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <div class="alert alert-success" role="alert">
+            <strong>Added to Favourites</strong> You can check your favourite items here <a href="#" class="alert-link">Favourite Items</a>.
+            <a href="#" title="" class="close-alert"><i class="la la-close"></i></a>
+        </div>
+
+        <section class="explore-feature section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-heading">
+                            <span>Explore Features</span>
+                            <h3>Service You Need</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-sm-6 col-md-6 col-lg-4">
+                        <a href="#" title="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="icon-home"></i>
+                                    <h3>Perfect Tools</h3>
+                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit conseat ipsum, nec sagittis sem nibh.</p>
+                                </div>
+                            </div><!--card end-->
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-sm-6 col-md-6 col-lg-4">
+                        <a href="#" title="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="icon-cursor"></i>
+                                    <h3>Search in Click</h3>
+                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit conseat ipsum, nec sagittis sem nibh.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-sm-6 col-md-6 col-lg-4">
+                        <a href="#" title="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="icon-lock"></i>
+                                    <h3>User Control</h3>
+                                    <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit conseat ipsum, nec sagittis sem nibh.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-cities section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-heading">
+                            <span>Other Users</span>
+                            <h3>People You may wanna Know</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="overlay"></div>
+                                <img src="https://via.placeholder.com/370x370" alt="" class="img-fluid">
+                                <div class="card-body">
+                                    <h4>New York</h4>
+                                    <p>5 Listings</p>
+                                    <i class="fa fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="overlay"></div>
+                                <img src="https://via.placeholder.com/370x370" alt="" class="img-fluid">
+                                <div class="card-body">
+                                    <h4>London</h4>
+                                    <p>10 Listings</p>
+                                    <i class="fa fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="overlay"></div>
+                                <img src="https://via.placeholder.com/370x370" alt="" class="img-fluid">
+                                <div class="card-body">
+                                    <h4>Melbrone</h4>
+                                    <p>7 Listings</p>
+                                    <i class="fa fa-angle-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-container" class="fullwidth-home-map">
+            <h3 class="vis-hid">Visible Heading</h3>
+            <div id="map" data-map-zoom="9"></div>
+        </section>
+
+        <a href="#" title="">
+            <section class="cta section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="cta-text">
+                                <h2>Discover a home you'll love to stay</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </a>
+
+
+     <section class="bottom section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-sm-6 col-md-4">
+                        <div class="bottom-logo">
+                            <img src="assets/images/logo.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-md-3">
+                        <div class="bottom-list">
+                            <h3>Helpful Links</h3>
+                            <ul>
+                                <li>
+                                    <a href="18_Half_Map.html" title="">Half Map</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">Register</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">Add Listing</a>
+                                </li>
+                            </ul>
+                        </div><!--bottom-list end-->
+                    </div>
+                    <div class="col-xl-5 col-sm-12 col-md-5 pl-0">
+                        <div class="bottom-desc">
+                            <h3>Aditional Information</h3>
+                            <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock body %}
+</html>

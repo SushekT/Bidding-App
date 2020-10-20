@@ -1,0 +1,283 @@
+
+@import url(style.css);
+
+body{
+    background: #0C0C0C;
+    position: relative;
+}
+
+.demo-header{
+    padding-top: 160px;
+    padding-bottom: 84px;
+    background: url("../images/banner/1.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.demo-header > * {
+    position: relative;
+    z-index: 1;
+}
+
+.demo-header::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.h-page-card{
+    text-align: center;
+    margin-top: 30px;
+}
+.h-page-card .h-page-card-preview{
+    display: inline-block;
+    margin-top: -40px;
+}
+.h-page-card .h-page-card-preview  img {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.h-page-card .h-page-card-body  {
+    text-align: center;
+    padding: 27px 10px;
+}
+
+.demo-header .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #fafafa;
+    margin: 0;
+    margin-bottom: 13px;
+}
+
+.h-page-card .title a {
+    color: #fafafa;
+    text-decoration: none;
+}
+.h-page-card .title a:hover {
+    color: #ff8500;
+}
+
+.h-page-card .description {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a5a5a5;
+}
+
+.h-card-body .title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 72px;
+    color: #ff8500;
+    margin-top: 0;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+.h-card-body .title span{
+    color: white;
+}
+.h-card-body .description {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 46px;
+    font-weight: bold;
+    -webkit-text-shadow: 0px 1px 2px rgba(1, 1, 1, 0.35);
+    text-shadow: 0px 1px 2px rgba(1, 1, 1, 0.35);
+}
+
+.h-page-card-footer .btn {
+    margin-right: 21px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 52px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    box-shadow: none!important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+
+}
+
+.btn:visited,
+.btn:focus,
+.btn:hover {
+    color: #fff;
+}
+
+.btn2 {
+    width: auto;
+    float: none;
+    display: inline-block;
+    padding: 0 30px;
+    margin-right: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.btn.btn-local-secondary:hover {
+    background: #ff8500;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-content{
+    padding: 105px 0 70px;
+    float: left;
+    width: 100%;
+    background-color: #eef1f4;
+}
+
+
+.block-header{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 25px 20px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    background: #222222;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.block-header p:first-child{
+    font-size: 24px;
+    font-weight: 600;
+}
+.block-header p{
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+.model-item{
+    position: relative;
+    float: left;
+    width: 100%;
+    border:1px solid #d3d3db;
+}
+.pg-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 5px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    -webkit-transition: background .3s;
+    -o-transition: background .3s;
+    transition: background .3s;
+}
+.pg-title:hover {
+    color: #fff;
+}
+
+.footer {
+    background: #1B1B1B;
+    text-align: center;
+    padding: 60px;
+}
+
+.demo-hps {
+    float: left;
+    width: 100%;
+}
+.demo_hp {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.demo_hp > a img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -ms-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+.demo_hp > a img:hover {
+    -webkit-transform: translate3d(0px, -53%, 100px);
+    -moz-transform: translate3d(0px, -53%, 100px);
+    -ms-transform: translate3d(0px, -53%, 100px);
+    -o-transform: translate3d(0px, -53%, 100px);
+    transform: translate3d(0px, -53%, 100px);
+}
+.demo_hp.st2 > a img:hover {
+    -webkit-transform: translate3d(0px, -440px, 0px);
+    -moz-transform: translate3d(0px, -440px, 0px);
+    -ms-transform: translate3d(0px, -440px, 0px);
+    -o-transform: translate3d(0px, -440px, 0px);
+    transform: translate3d(0px, -440px, 0px);
+}
+.demo_hp.st2 {
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+.demo-header .title a {
+    color: #fff;
+}
+.demo_hp.p2 > a img:hover {
+    -webkit-transform: translate3d(0px, -55%, 0px);
+    -moz-transform: translate3d(0px, -55%, 0px);
+    -ms-transform: translate3d(0px, -55%, 0px);
+    -o-transform: translate3d(0px, -55%, 0px);
+    transform: translate3d(0px, -55%, 0px);
+}
+.demo_hp.p3 > a img:hover {
+    -webkit-transform: translate3d(0px, -30px, 0px);
+    -moz-transform: translate3d(0px, -30px, 0px);
+    -ms-transform: translate3d(0px, -30px, 0px);
+    -o-transform: translate3d(0px, -30px, 0px);
+    transform: translate3d(0px, -30px, 0px);
+}

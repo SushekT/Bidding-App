@@ -1,0 +1,72 @@
+// Variables
+@import "variable.scss";
+.intro.section-padding {
+    padding: 75px 0px 30px;
+}
+
+.intro-content {
+    h3 {
+        font-size: 32px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-weight: 400;
+    }
+    p {
+        font-family: $rl;
+        font-size: 16px;
+        color: #67686c;
+        line-height: 27px;
+    }
+    a {
+        margin-top: 10px;
+        border-radius: 30px;
+        padding: 15px 30px 15px 29px;
+        display: inline-block;
+        border: 1px solid $lb;
+        font-size: 14px;
+        color: $lb;
+        box-shadow: none!important;
+        border: 1px solid $lb;
+        i {
+            margin-right: 6px;
+            font-size: 14px;
+            position: relative;
+            top: 2px;
+        }
+        &:hover,
+        &:focus,
+        &.active {
+            background: $lb;
+            border: 1px solid $lb;
+            color: $wh;
+            box-shadow: none!important;
+        }
+    }
+}
+
+.intro-img {
+    img {
+        width: 100%;
+    }
+}
+
+.intro-thumb-row {
+    background: #fff;
+    padding: 25px 0px 25px;
+    margin-top: -52px;
+    z-index: 9999;
+    position: relative;
+    display: inline-block;
+}
+
+.intro-thumb {
+    border: 1px solid $border;
+    display: inline-block;
+    margin-right: 30px;
+    h6 {
+        display: inline-block;
+        padding: 10px 15px;
+        min-width: 175px;
+        font-size: 14px;
+    }
+}

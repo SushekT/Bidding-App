@@ -1,0 +1,47 @@
+// Variables
+@import  "variable.scss";
+
+.bottom{
+    &.section-padding{
+        padding: 65px 0px 55px;
+    }
+}
+.bottom-list{
+    margin-top:10px;
+    h3{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    ul{
+        li{
+            a{
+                line-height: 40px;
+                color: #67686c;
+                i{
+                    margin-right: 7px;
+                }
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.bottom-desc{
+    margin-top:10px;
+    h3{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    p{
+        line-height: 27px;
+        color: #67686c;
+    }
+}
+
+.bottom-logo{
+    img{
+        max-width: 105px;;
+    }
+}

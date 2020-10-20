@@ -1,0 +1,990 @@
+@import "variable.scss";
+
+
+/*  1 - media screen and (max-width: 1750px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 1680px) and (max-width:1750px) {}
+
+
+
+
+/*  2 - media screen and (max-width: 1680px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 1680px) and (max-width:1679px) {}
+
+
+
+
+/*  3 - media screen and (max-width: 1280px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 1280px) and (max-width:1679px) {}
+
+
+
+
+/*  4 - media screen and (max-width: 1199px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 1200px) and (max-width: 1279px) {}
+
+
+
+/*  5 - media screen and (max-width: 1024px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+//////////////////////////
+// Intro
+////////////////////////
+
+.intro-thumb-row{
+    margin-top: 0px;
+}
+
+////////////////////////
+// Polular Listing
+////////////////////////
+
+
+.popular-listing .card .card-body ul li {
+    padding: 0px 4px;
+}
+
+
+}
+
+/*  6 - media screen and (max-width: 991px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-padding{
+        padding:50px 0px;
+    }
+
+    .section-heading h3 {
+        font-size: 24px;
+    }
+
+    ///////////////////
+    // Header
+    //////////////////
+
+
+    .header .navbar-nav .nav-item .dropdown-menu{
+        margin-top: 0px;
+        padding: 0px;
+        .dropdown-item{
+            padding-left: 0px;
+        }
+    }
+
+    .header .dropdown-toggle::after {
+        float: right;
+    }
+    .navbar-collapse{
+        margin-top: 10px;
+    }
+    .submit-btn{
+        a{
+            display: inline-block;
+        }
+    }
+///////////////////////
+// Banner
+//////////////////////
+
+    .banner {
+        min-height: auto;
+        padding: 75px 0px;
+        .banner-content h1 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+    }
+
+    .banner-search{
+        background: transparent;
+        margin: 0px;
+        .drop-menu{
+            padding-left: 0px;
+            .dropeddown{
+                margin-top: 0px;
+            }
+        }
+        .btn{
+            float: none;
+            display: block;
+        }
+    }
+
+//////////////////////////
+// Intro
+////////////////////////
+
+.intro-content{
+    h3{
+        margin-top: 0px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    a{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}
+
+.intro-thumb-row{
+    margin-top: 0px;
+}
+
+.intro-thumb {
+    margin-right: 0px;
+    width: auto;
+    margin-bottom: 15px;
+    h6{
+        min-width: 120px;
+    }
+}
+
+////////////////////////
+// Polular Listing
+////////////////////////
+
+.popular-listing .card {
+    margin-top: 30px;
+}
+.popular-listing .card .card-body ul li {
+    display: block;
+    padding-left: 0px;
+    border: 0px;
+}
+
+////////////////////
+// Explore
+////////////////////
+
+.explore-feature .card {
+    margin-top: 30px;
+}
+
+
+////////////////////
+// Popular Cities
+////////////////////
+
+.popular-cities .card {
+    margin-top: 30px;
+    .card-body{
+        h4 {
+            font-size: 18px;
+        }
+        a {
+            padding: 7px 10px;
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+
+//////////////////
+// CTA
+/////////////////
+.cta .cta-text h2 {
+    font-size: 24px;
+}
+
+
+
+////////////
+// Footer
+////////////
+
+.footer-content {
+    padding: 20px 0px;
+}
+
+.copyright{
+    margin-bottom: 15px;
+    p{
+        font-size: 12px;
+    }
+}
+
+.footer-social {
+    text-align: right;
+}
+
+}
+
+
+/*  7 - media screen and (max-width: 767px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 680px) and (max-width: 767px) {
+    .section-padding{
+        padding:50px 0px;
+    }
+
+    .section-heading h3 {
+        font-size: 24px;
+    }
+
+    ///////////////////
+    // Header
+    //////////////////
+
+    .header-address {
+        padding: 12px 0px 0px;
+    }
+    .header-social {
+        text-align: left;
+        padding: 0px 0px 12px;
+    }
+
+    .header .navbar-nav .nav-item .dropdown-menu{
+        margin-top: 0px;
+        padding: 0px;
+        .dropdown-item{
+            padding-left: 0px;
+        }
+    }
+
+    .header .dropdown-toggle::after {
+        float: right;
+    }
+    .navbar-collapse{
+        margin-top: 10px;
+    }
+    .submit-btn{
+        a{
+            display: inline-block;
+        }
+    }
+///////////////////////
+// Banner
+//////////////////////
+
+    .banner {
+        min-height: auto;
+        padding: 75px 0px;
+        .banner-content h1 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+    }
+
+    .banner-search{
+        background: transparent;
+        margin: 0px;
+        .drop-menu{
+            padding-left: 0px;
+            .dropeddown{
+                margin-top: 0px;
+            }
+        }
+        .btn{
+            float: none;
+            display: block;
+        }
+    }
+
+//////////////////////////
+// Intro
+////////////////////////
+
+.intro-content{
+    h3{
+        margin-top: 0px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    a{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}
+
+.intro-thumb-row{
+    margin-top: 0px;
+}
+
+.intro-thumb {
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+////////////////////////
+// Polular Listing
+////////////////////////
+
+.popular-listing .card {
+    margin-top: 30px;
+}
+.popular-listing .card .card-body ul li {
+    font-size: 12px;
+    padding: 0px 7px;
+}
+
+////////////////////
+// Explore
+////////////////////
+
+.explore-feature .card {
+    margin-top: 30px;
+}
+
+
+////////////////////
+// Popular Cities
+////////////////////
+
+.popular-cities .card {
+    margin-top: 30px;
+    .card-body{
+        h4 {
+            font-size: 18px;
+        }
+        a {
+            padding: 7px 10px;
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+
+//////////////////
+// CTA
+/////////////////
+.cta .cta-text h2 {
+    font-size: 24px;
+}
+
+
+//////////////
+// Bottom
+/////////////
+
+.bottom-list{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.bottom-desc{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+
+////////////
+// Footer
+////////////
+
+.footer-content {
+    padding: 20px 0px;
+}
+
+.copyright{
+    margin-bottom: 15px;
+    p{
+        font-size: 12px;
+    }
+}
+
+.footer-social {
+    text-align: left;
+}
+
+}
+
+
+
+/*  8 - media screen and (max-width: 680px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 480px) and (max-width: 679px) {
+    .section-padding{
+        padding:50px 0px;
+    }
+
+    .section-heading h3 {
+        font-size: 24px;
+    }
+
+    ///////////////////
+    // Header
+    //////////////////
+
+    .header-address {
+        padding: 12px 0px 0px;
+    }
+    .header-social {
+        text-align: left;
+        padding: 0px 0px 12px;
+    }
+
+    .header .navbar-nav .nav-item .dropdown-menu{
+        margin-top: 0px;
+        padding: 0px;
+        .dropdown-item{
+            padding-left: 0px;
+        }
+    }
+
+    .header .dropdown-toggle::after {
+        float: right;
+    }
+    .navbar-collapse{
+        margin-top: 10px;
+    }
+    .submit-btn{
+        a{
+            display: inline-block;
+        }
+    }
+///////////////////////
+// Banner
+//////////////////////
+
+    .banner {
+        min-height: auto;
+        padding: 75px 0px;
+        .banner-content h1 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+    }
+
+    .banner-search{
+        background: transparent;
+        margin: 0px;
+        .drop-menu{
+            padding-left: 0px;
+            .dropeddown{
+                margin-top: 0px;
+            }
+        }
+        .btn{
+            float: none;
+            display: block;
+        }
+    }
+
+//////////////////////////
+// Intro
+////////////////////////
+
+.intro-content{
+    h3{
+        margin-top: 0px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    a{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}
+
+.intro-thumb-row{
+    margin-top: 0px;
+}
+
+.intro-thumb {
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+////////////////////////
+// Polular Listing
+////////////////////////
+
+.popular-listing .card {
+    margin-top: 30px;
+}
+.popular-listing .card .card-body ul li {
+    font-size: 12px;
+    padding: 0px 7px;
+}
+
+////////////////////
+// Explore
+////////////////////
+
+.explore-feature .card {
+    margin-top: 30px;
+}
+
+
+////////////////////
+// Popular Cities
+////////////////////
+
+.popular-cities .card {
+    margin-top: 30px;
+    .card-body{
+        h4 {
+            font-size: 18px;
+        }
+        a {
+            padding: 7px 10px;
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+
+//////////////////
+// CTA
+/////////////////
+.cta .cta-text h2 {
+    font-size: 24px;
+}
+
+
+//////////////
+// Bottom
+/////////////
+
+.bottom-list{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.bottom-desc{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+
+////////////
+// Footer
+////////////
+
+.footer-content {
+    padding: 20px 0px;
+}
+
+.copyright{
+    margin-bottom: 15px;
+    p{
+        font-size: 12px;
+    }
+}
+
+.footer-social {
+    text-align: left;
+}
+
+}
+
+
+/*  9 - media screen and (max-width: 480px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 360px) and (max-width: 479px) {
+    .section-padding{
+        padding:50px 0px;
+    }
+
+    .section-heading h3 {
+        font-size: 24px;
+    }
+
+    ///////////////////
+    // Header
+    //////////////////
+
+    .header-address {
+        padding: 12px 0px 0px;
+    }
+    .header-social {
+        text-align: left;
+        padding: 0px 0px 12px;
+    }
+
+    .header .navbar-nav .nav-item .dropdown-menu{
+        margin-top: 0px;
+        padding: 0px;
+        .dropdown-item{
+            padding-left: 0px;
+        }
+    }
+
+    .header .dropdown-toggle::after {
+        float: right;
+    }
+    .navbar-collapse{
+        margin-top: 10px;
+    }
+    .submit-btn{
+        a{
+            display: inline-block;
+        }
+    }
+///////////////////////
+// Banner
+//////////////////////
+
+    .banner {
+        min-height: auto;
+        padding: 75px 0px;
+        .banner-content h1 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+    }
+
+    .banner-search{
+        background: transparent;
+        margin: 0px;
+        .drop-menu{
+            padding-left: 0px;
+            .dropeddown{
+                margin-top: 0px;
+            }
+        }
+        .btn{
+            float: none;
+            display: block;
+        }
+    }
+
+//////////////////////////
+// Intro
+////////////////////////
+
+.intro-content{
+    h3{
+        margin-top: 0px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    a{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}
+
+.intro-thumb-row{
+    margin-top: 0px;
+}
+
+.intro-thumb {
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+////////////////////////
+// Polular Listing
+////////////////////////
+
+.popular-listing .card {
+    margin-top: 30px;
+}
+.popular-listing .card .card-body ul li {
+    font-size: 12px;
+    padding: 0px 7px;
+}
+
+////////////////////
+// Explore
+////////////////////
+
+.explore-feature .card {
+    margin-top: 30px;
+}
+
+
+////////////////////
+// Popular Cities
+////////////////////
+
+.popular-cities .card {
+    margin-top: 30px;
+    .card-body{
+        h4 {
+            font-size: 18px;
+        }
+        a {
+            padding: 7px 10px;
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+
+//////////////////
+// CTA
+/////////////////
+.cta .cta-text h2 {
+    font-size: 24px;
+}
+
+
+//////////////
+// Bottom
+/////////////
+
+.bottom-list{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.bottom-desc{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+
+////////////
+// Footer
+////////////
+
+.footer-content {
+    padding: 20px 0px;
+}
+
+.copyright{
+    margin-bottom: 15px;
+    p{
+        font-size: 12px;
+    }
+}
+
+.footer-social {
+    text-align: left;
+}
+
+}
+
+
+/*  10 - media screen and (max-width: 320px)
+---------------------------------------------------------------------- */
+
+@media (min-width: 320px) and (max-width: 359px) {
+    .section-padding{
+        padding:50px 0px;
+    }
+
+    .section-heading h3 {
+        font-size: 24px;
+    }
+
+    ///////////////////
+    // Header
+    //////////////////
+
+    .header-address {
+        padding: 12px 0px 0px;
+    }
+    .header-social {
+        text-align: left;
+        padding: 0px 0px 12px;
+    }
+
+    .header .navbar-nav .nav-item .dropdown-menu{
+        margin-top: 0px;
+        padding: 0px;
+        .dropdown-item{
+            padding-left: 0px;
+        }
+    }
+
+    .header .dropdown-toggle::after {
+        float: right;
+    }
+    .navbar-collapse{
+        margin-top: 10px;
+    }
+    .submit-btn{
+        a{
+            display: inline-block;
+        }
+    }
+///////////////////////
+// Banner
+//////////////////////
+
+    .banner {
+        min-height: auto;
+        padding: 75px 0px;
+        .banner-content h1 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+    }
+
+    .banner-search{
+        background: transparent;
+        margin: 0px;
+        .drop-menu{
+            padding-left: 0px;
+            .dropeddown{
+                margin-top: 0px;
+            }
+        }
+        .btn{
+            float: none;
+            display: block;
+        }
+    }
+
+//////////////////////////
+// Intro
+////////////////////////
+
+.intro-content{
+    h3{
+        margin-top: 0px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    a{
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}
+
+.intro-thumb-row{
+    margin-top: 0px;
+}
+
+.intro-thumb {
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+////////////////////////
+// Polular Listing
+////////////////////////
+
+.popular-listing .card {
+    margin-top: 30px;
+}
+.popular-listing .card .card-body ul li {
+    font-size: 12px;
+    padding: 0px 7px;
+}
+
+////////////////////
+// Explore
+////////////////////
+
+.explore-feature .card {
+    margin-top: 30px;
+}
+
+
+////////////////////
+// Popular Cities
+////////////////////
+
+.popular-cities .card {
+    margin-top: 30px;
+    .card-body{
+        h4 {
+            font-size: 18px;
+        }
+        a {
+            padding: 7px 10px;
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+
+//////////////////
+// CTA
+/////////////////
+.cta .cta-text h2 {
+    font-size: 24px;
+}
+
+
+//////////////
+// Bottom
+/////////////
+
+.bottom-list{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+.bottom-desc{
+    h3{
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+
+////////////
+// Footer
+////////////
+
+.footer-content {
+    padding: 20px 0px;
+}
+
+.copyright{
+    margin-bottom: 15px;
+    p{
+        font-size: 12px;
+    }
+}
+
+.footer-social {
+    text-align: left;
+}
+
+
+}
+
+

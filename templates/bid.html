@@ -1,0 +1,52 @@
+{% extends 'master/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} You are Bidding {{product.title}} {% endblock %}
+
+</head>
+{% block body %}
+       <section class="pager-sec bfr">
+            <div class="container">
+                <div class="pager-sec-details">
+                    <h3>You are Bidding {{product.title}}</h3>
+
+                </div><!--pager-sec-details end-->
+            </div>
+        </section>
+
+        <section class="blog-single-sec section-padding">
+            <div class="container">
+                <div class="blog-single-details">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="blog-single-post single">
+                                <ul class="post-nfo">
+                                    <li><i class="la la-calendar"></i>{{product.postdate}}</li>
+                                    <!--<li><i class="la la-comment-o"></i><a href="#" title="">4 Comments</a></li>-->
+                                    <li><i class="la la-bookmark-o"></i><a href="#" title="">{{product.category}}</a></li>
+                                </ul>
+                                <h3>{{product.title}}</h3>
+                                <div class="blog-img">
+                                    <img src="{{product.cover_image.url}}" alt="" style="height:400px; width:auto;">
+                                </div><!--blog-img end-->
+                        </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 style="font-size:30px;">Bid Here</h3>
+                            <br>
+                            <form method="POST" action="{% url 'product:product_bid' product.slug %}">
+                                {% csrf_token %}
+                                {{form.as_p}}
+                                <br>
+                                <button type="submit" class="btn btn-primary">  BID  .</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!--blog-single-details end-->
+            </div>
+        </section><!--blog-single-sec end-->
+{% endblock body %}
+</html>>
